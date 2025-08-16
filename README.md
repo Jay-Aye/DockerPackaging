@@ -36,7 +36,7 @@ DockerPackaging/
 - **Docker & Docker Compose** deployment
 - **Comprehensive Unit Testing** with xUnit, Moq, and FluentAssertions
 - **Automatic Database Seeding** with sample data
-- **Swagger as Primary API Documentation** - Comprehensive, interactive API reference
+- **Swagger as Single Source of Truth** - All API documentation and testing
 - **Clean Architecture** with separation of concerns
 
 ## 🎵 Song Entity
@@ -78,57 +78,28 @@ docker compose logs -f
 docker compose down
 ```
 
-**📚 API Documentation**: Once running, visit http://localhost:5000/swagger for complete API documentation and interactive testing.
-
 ### Services
 - **API**: .NET 8 Web API running on port 5000
 - **PostgreSQL**: Database running on port 5432
 
 ### Access Points
-- **API**: http://localhost:5000
-- **Swagger**: http://localhost:5000/swagger
+- **Swagger Documentation**: http://localhost:5000/swagger
 - **Database**: localhost:5432 (postgres/postgres)
 
-## 📡 API Endpoints
+**📚 All API Information**: Once running, visit http://localhost:5000/swagger for complete API documentation, endpoints, examples, and interactive testing.
 
-The API provides full CRUD operations for managing songs. All endpoints are documented with comprehensive examples, request/response schemas, and validation rules in the **Swagger UI**.
+## 📚 Swagger Documentation
 
-### **Quick Access**
-- **Swagger Documentation**: http://localhost:5000/swagger
-- **API Base URL**: http://localhost:5000/api
-
-### **Available Operations**
-- **GET** `/api/songs` - Retrieve all songs
-- **GET** `/api/songs/{id}` - Get song by ID  
-- **POST** `/api/songs` - Create new song
-- **PUT** `/api/songs/{id}` - Update existing song
-- **DELETE** `/api/songs/{id}` - Delete song by ID
-
-### **Why Use Swagger?**
-- **Interactive Testing**: Try endpoints directly from the browser
-- **Live Examples**: See exact request/response formats
-- **Validation Rules**: Understand required fields and constraints
-- **Error Handling**: Learn about all possible response codes
-- **Always Up-to-Date**: Documentation automatically syncs with code
-
-## 📚 Enhanced Swagger Documentation
-
-**Swagger UI is your primary source for complete API documentation.** It provides comprehensive, interactive documentation that automatically stays in sync with your code.
+**Swagger UI is your single source of truth for all API information.** It provides comprehensive, interactive documentation that automatically stays in sync with your code.
 
 ### **What You'll Find in Swagger**
 
-#### **Complete API Reference**
-- **All Endpoints**: Detailed documentation for every API operation
-- **Request/Response Examples**: Real-world examples for testing
+- **Complete API Reference**: All endpoints, parameters, and response models
+- **Interactive Testing**: Execute API calls directly from the browser
+- **Request/Response Examples**: Real-world examples for all operations
 - **Parameter Validation**: Required fields, data types, and constraints
-- **Response Models**: Complete schema definitions for all data types
 - **Error Handling**: All possible HTTP status codes and error messages
-
-#### **Interactive Features**
-- **Live Testing**: Execute API calls directly from the browser
-- **Request Builder**: Easy-to-use forms for building requests
-- **Response Viewer**: See actual API responses in real-time
-- **Schema Explorer**: Browse and understand data models
+- **Data Models**: Complete schema definitions for all entities
 
 ### **Access Swagger UI**
 Navigate to **http://localhost:5000/swagger** to explore the complete API documentation.
@@ -139,7 +110,6 @@ Navigate to **http://localhost:5000/swagger** to explore the complete API docume
 - 📱 **Responsive Design**: Works perfectly on all devices
 - 🎯 **Deep Linking**: Direct links to specific endpoints
 - ⚡ **Performance Metrics**: See request duration and response times
-- 📊 **Visual Schemas**: Clear visualization of data structures
 
 ## 🧪 Testing
 
@@ -218,7 +188,7 @@ The project generates XML documentation files that are automatically integrated 
 
 ## 📝 Error Handling
 
-The API returns appropriate HTTP status codes. For complete error handling documentation, including all status codes and error messages, see the **Swagger UI** at http://localhost:5000/swagger.
+The API returns appropriate HTTP status codes for different scenarios. For complete error handling documentation, including all status codes, error messages, and validation rules, see the **Swagger UI** at http://localhost:5000/swagger.
 
 ## 🤝 Contributing
 
@@ -229,7 +199,7 @@ The API returns appropriate HTTP status codes. For complete error handling docum
 5. Ensure all tests pass
 6. Submit a pull request
 
-**📝 Documentation**: When adding new API endpoints, ensure they include comprehensive XML comments for automatic Swagger documentation.
+**📝 Documentation**: When adding new API endpoints, ensure they include comprehensive XML comments. Swagger will automatically generate documentation from these comments, maintaining it as the single source of truth for all API information.
 
 ## 📄 License
 
